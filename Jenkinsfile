@@ -29,7 +29,7 @@ pipeline {
     stage('Cleanup Workspace') {
       steps {
         cleanWs()
-        sh 'echo "Cleaned Up Workspace For Project'
+        sh 'echo Cleaned Up Workspace For Project'
       }
     }
 
@@ -38,20 +38,20 @@ pipeline {
         checkout([
             $class: 'GitSCM',
             branches: [[name: '*/main']],
-            userRemoteConfigs: [[url: 'http://git.mk-devops.local/dmccarty/spring-petclinic.git']]
+            userRemoteConfigs: [[url: 'http://gitea-http/dmccarty/spring-petclinic.git']]
         ])
       }
     }
 
     stage(' Unit Testing') {
       steps {
-        sh "echo 'Running Unit Tests'"
+        sh 'echo Running Unit Tests'
       }
     }
 
     stage('Code Analysis') {
       steps {
-        sh "echo 'Running Code Analysis'"
+        sh 'echo Running Code Analysis'
       }
     }
 
@@ -60,9 +60,9 @@ pipeline {
         branch 'develop'
       }
       steps {
-        sh "echo 'Building Artifact'"
+        sh 'echo Building Artifact'
 
-        sh "echo 'Deploying Code'"
+        sh 'echo Deploying Code'
       }
     }
 
