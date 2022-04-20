@@ -47,3 +47,14 @@ https://devopscube.com/jenkins-multibranch-pipeline-tutorial/
     }
     ```
 3. Update the URL for teh petstore application to pull from internal gitea service
+   ```yaml
+    stage('Code Checkout') {
+      steps {
+        checkout([
+            $class: 'GitSCM',
+            branches: [[name: '*/main']],
+            userRemoteConfigs: [[url: 'http://gitea-http.gitea.svc.mk-devops.local:3000/dmccarty/spring-petclinic.git']]
+        ])
+      }
+    }
+   ```
