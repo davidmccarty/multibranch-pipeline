@@ -58,3 +58,4 @@ https://devopscube.com/jenkins-multibranch-pipeline-tutorial/
       }
     }
    ```
+4. Create pull request from branch 'feature' --> 'develop'

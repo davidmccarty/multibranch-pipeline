@@ -38,7 +38,7 @@ pipeline {
         checkout([
             $class: 'GitSCM',
             branches: [[name: '*/main']],
-            userRemoteConfigs: [[url: 'http://gitea.gitea-http.svc.mk-devops.local:3000/dmccarty/spring-petclinic.git']]
+            userRemoteConfigs: [[url: 'http://gitea-http.gitea.svc.mk-devops.local:3000/dmccarty/spring-petclinic.git']]
         ])
       }
     }
