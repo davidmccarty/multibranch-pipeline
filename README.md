@@ -73,3 +73,4 @@ In gitea for the project craete a webhook
 Open the webhook and click the 'Test Delivery' button and make sure you get a 200 response.
 
 Now you can run similar test as before and the build will run without needing to scan the project.
+e.g. checkout the 'feature' branch and add step to print the webhook parameters.
