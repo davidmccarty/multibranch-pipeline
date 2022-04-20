@@ -7,6 +7,7 @@ https://devopscube.com/jenkins-multibranch-pipeline-tutorial/
 1. Fork the pipeline and application repos to github
 2. Mirror them into gitea
 3. Use settings to convert to regular repos (i.e. break the mirror)
+4. Create a push mirror back to github withe suer / token credentials (to make gitea the master).
 
 
 ## Setup Gitea plugin
